@@ -19,10 +19,8 @@ public class Main {
             throw new IllegalArgumentException("Array is null or empty");
         }
 
-        int closest = Integer.MAX_VALUE;
-        int currentNumber;
-        boolean flag_MinValue = false;
         int minValueCounter = 0;
+        int closest = nums[0];
 
         //check if nums contains Integer.MIN_VALUE and if there are other elements
         for(int num : nums) {
@@ -36,7 +34,7 @@ public class Main {
             return Integer.MIN_VALUE;
         }
 
-        for (int i = 0; i < nums.length; i+=1) {
+        for (int i = 1; i < nums.length; i+=1) {
 
             if(nums[i] == Integer.MIN_VALUE) {
                 continue;

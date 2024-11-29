@@ -29,11 +29,6 @@ public class Main {
             }
         }
 
-        // array contains only Integer.MIN_VALUE
-        if(nums.length == minValueCounter) {
-            return Integer.MIN_VALUE;
-        }
-
         for (int i = 1; i < nums.length; i+=1) {
 
             if(nums[i] == Integer.MIN_VALUE) {

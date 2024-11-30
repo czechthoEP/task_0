@@ -9,7 +9,6 @@ public class Main {
 
     /*
     Returns the closest value to 0 in the given array.
-    On a tie only the positive number gets returned.
 
     @param nums contains numbers
     @return closest value to 0, for multiple return values only the positive value gets returned
@@ -19,15 +18,7 @@ public class Main {
             throw new IllegalArgumentException("Array is null or empty");
         }
 
-        int minValueCounter = 0;
         int closest = nums[0];
-
-        //check if nums contains Integer.MIN_VALUE and if there are other elements
-        for(int num : nums) {
-            if(num == Integer.MIN_VALUE) {
-                minValueCounter +=1;
-            }
-        }
 
         for (int i = 1; i < nums.length; i+=1) {
 
